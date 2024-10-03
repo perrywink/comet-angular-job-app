@@ -6,18 +6,14 @@
     *ngIf="jobListing; else notFound"
   >
     <figure class="aspect-square h-full w-1/2">
-      <img
-        [src]="jobListing.image"
-        alt="Photo of {{ jobListing.name }}"
-      />
+      <img [src]="jobListing.image" alt="Photo of {{ jobListing.name }}" />
     </figure>
     <div class="card-body">
       <h2 class="card-title">{{ jobListing.name }}</h2>
-      <div class="flex inline-wrap gap-2">
-        <div class="badge badge-outline">{{ jobListing.category }}</div>
-        <div class="badge badge-outline">
-          {{ jobListing.city }} {{ jobListing.state }}
-        </div>
+      <div class="flex flex-col gap-2">
+        <p>Category: {{ jobListing.category }}</p>
+        <p>Location: {{ jobListing.city }}, {{ jobListing.state }}</p>
+        
       </div>
       <div class="card-actions my-2">
         <button class="btn btn-primary" onclick="apply_modal.showModal()">

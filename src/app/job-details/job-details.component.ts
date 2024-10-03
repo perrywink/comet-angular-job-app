@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
-import { PocketBaseService } from '../pocketbase.service';
+import { PocketBaseService } from '../../services/pocketbase.service';
 import { JobListingsResponse } from 'src/types/pocketbase-types';
 import Client from 'pocketbase';
 import { DomSanitizer, SafeHtml } from "@angular/platform-browser";

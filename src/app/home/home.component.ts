@@ -1,7 +1,7 @@
 import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { JobListingComponent } from "../job-listing/job-listing.component";
-import { PocketBaseService } from "../pocketbase.service";
+import { PocketBaseService } from "../../services/pocketbase.service";
 import Client, { RecordModel } from "pocketbase";
 import { JobListingsResponse } from "src/types/pocketbase-types";
 
