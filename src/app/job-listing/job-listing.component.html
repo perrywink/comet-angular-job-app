@@ -1,0 +1,29 @@
+<section class="p-4">
+  <div class="card bg-base-100 max-w-sm shadow-xl">
+    <figure>
+      <img
+        [src]=jobListing.image
+        alt="Photo of {{ jobListing.name }}"
+        class="w-full aspect-square object-cover"
+      />
+    </figure>
+    <div class="card-body">
+      <div class="flex flex-col gap-y-4">
+        <h2 class="card-title">
+          {{ jobListing.name }}
+        </h2>
+        <div class="flex inline-wrap gap-2">
+          <div class="badge badge-outline">{{ jobListing.category }}</div>
+          <div class="badge badge-outline">{{jobListing.city}} {{jobListing.state}}</div>
+        </div>
+      </div>
+      <div class="card-actions pt-4 justify-end">
+        <button class="btn btn-sm btn-primary btn-outline">
+          <a [routerLink]="['/details', jobListing.id]">
+            See Job
+          </a>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,12 @@
+<section>
+  <form class="flex p-4">
+    <input class="input input-sm" type="text" placeholder="Search by anything..." />
+    <button class="btn btn-sm btn-primary" type="button">Search</button>
+  </form>
+</section>
+<div class="grid grid-cols-3 gap-2">
+  <app-job-listing 
+    *ngFor="let jobListing of jobListings"
+    [jobListing]="jobListing"
+  />
+</div>
