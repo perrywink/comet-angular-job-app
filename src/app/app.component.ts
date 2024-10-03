@@ -10,11 +10,6 @@ import { RouterModule } from "@angular/router";
       <div class="flex-1">
         <a class="btn btn-ghost text-xl" [routerLink]="['/']">comet</a>
       </div>
-      <div class="flex-none">
-        <ul class="menu menu-horizontal px-1">
-          <li><a class="btn ">Add Job</a></li>
-        </ul>
-      </div>
     </nav>
     <main class="min-h-screen pt-20">
       <router-outlet/>

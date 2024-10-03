@@ -1,11 +1,16 @@
-<section>
-  <form class="flex p-4">
-    <input class="input input-sm" type="text" placeholder="Search by anything..." />
-    <button class="btn btn-sm btn-primary" type="button">Search</button>
+<section class="bg-base-200">
+  <form [formGroup]="searchForm" (submit)="searchJobs()" class="flex p-4">
+    <input
+      formControlName="searchQuery"
+      class="input input-sm"
+      type="text"
+      placeholder="Search by name..."
+    />
+    <button class="btn btn-sm btn-outline" type="submit">Search</button>
   </form>
 </section>
-<div class="grid grid-cols-3 gap-2">
-  <app-job-listing 
+<div class="grid md:grid-cols-3 gap-2">
+  <app-job-listing
     *ngFor="let jobListing of jobListings"
     [jobListing]="jobListing"
   />
