@@ -9,11 +9,10 @@
       <img [src]="jobListing.image" alt="Photo of {{ jobListing.name }}" />
     </figure>
     <div class="card-body">
-      <h2 class="card-title">{{ jobListing.name }}</h2>
-      <div class="flex flex-col gap-2">
-        <p>Category: {{ jobListing.category }}</p>
-        <p>Location: {{ jobListing.city }}, {{ jobListing.state }}</p>
-        
+      <h2 class="card-title text-2xl">{{ jobListing.name }}</h2>
+      <div class="flex flex-col gap-2 my-4">
+        <p class="badge badge-outline rounded-lg">{{ jobListing.city }}, {{ jobListing.state }}</p>
+        <p class="badge badge-outline rounded-lg">{{ jobListing.category.slice(0,1).toUpperCase() + jobListing.category.slice(1) }}</p>
       </div>
       <div class="card-actions my-2">
         <button class="btn btn-primary" onclick="apply_modal.showModal()">
